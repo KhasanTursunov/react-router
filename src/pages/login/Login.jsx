@@ -1,8 +1,10 @@
 import React from 'react'
+import { Logger } from 'sass'
+import LoginCom from '../../components/loginCo/LoginCom'
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <LoginCom/>
   )
 }
 
