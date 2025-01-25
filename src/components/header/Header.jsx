@@ -1,9 +1,8 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import LOGO from '../../assets/svg/logo.svg'
-import N1 from '../../assets/svg/n1.svg'
-import N2 from '../../assets/svg/n2.svg'
-import N3 from '../../assets/svg/n3.svg'
+import { NavLink } from "react-router-dom";
+import LOGO from "../../assets/svg/logo.svg";
+import N1 from "../../assets/svg/n1.svg";
+import N2 from "../../assets/svg/n2.svg";
+import N3 from "../../assets/svg/n3.svg";
 
 const Header = () => {
   return (
@@ -19,6 +18,7 @@ const Header = () => {
           <div className="navbar_links">
             <ul className="links">
               <NavLink to={"/"}>Главная </NavLink>
+              <NavLink to={"/products/cars"}>Авто</NavLink>
               <NavLink to={"/about"}>О нас</NavLink>
               <NavLink to={"/contact"}>Контакты</NavLink>
               <NavLink to={"/login"}>Логин </NavLink>

@@ -1,4 +1,3 @@
-import React from 'react'
 import footerIcon1 from "../../assets/svg/footer1.svg";
 import footerIcon2 from "../../assets/svg/footer2.svg";
 import footerIcon3 from "../../assets/svg/footer3.svg";

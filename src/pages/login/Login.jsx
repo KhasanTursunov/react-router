@@ -1,11 +1,7 @@
-import React from 'react'
-import { Logger } from 'sass'
-import LoginCom from '../../components/loginCo/LoginCom'
+import LoginCom from "../../components/loginCo/LoginCom";
 
 const Login = () => {
-  return (
-    <LoginCom/>
-  )
-}
+  return <LoginCom />;
+};
 
-export default Login
+export default Login;

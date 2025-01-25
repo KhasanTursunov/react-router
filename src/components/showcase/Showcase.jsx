@@ -1,4 +1,3 @@
-import React from 'react'
 import ShowcaseImg from '../../assets/svg/showcase.svg'
 
 
