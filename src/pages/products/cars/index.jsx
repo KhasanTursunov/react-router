@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { baseUrl } from "../../../utils/api";
+import { useNavigate } from "react-router-dom"
 import axios from "axios";
 import CarCardSkleton from "../../../components/skleton/CarCardSkleton";
 
@@ -14,8 +15,9 @@ import bmw_m3 from "../../../assets/img/bmw-m3.jpg";
 import tesla_model_3 from "../../../assets/img/tesla-model-3.jpg";
 import audi_q5 from "../../../assets/img/audi-q5.avif";
 import mers_e_class from "../../../assets/img/mers-e-class.jpg";
-
+console.log("https://freetestapi.com/api/v1/cars");
 export default function Cars() {
+  const navigate = useNavigate()
   const [carsData, setCarsData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const carsImg = [
@@ -38,7 +40,7 @@ export default function Cars() {
         const first10data = res.data.slice(0, 9);
         setCarsData(first10data);
       })
-      .catch((err) => console.error("Error:::", err))
+      .catch((err) => console.error("Error", err))
       .finally(() => {
         setIsLoading(false);
       });
@@ -63,12 +65,16 @@ export default function Cars() {
                     {el.make} {el.model}
                   </h2>
                 </div>
+
                 <img
+                  onClick={() => navigate(`/product/${el.id}`)}
                   src={carsImg[idx]}
                   alt={`${el.make} ${el.model}`}
                   className="w-full h-64 object-cover"
                 />
+
                 <div className="p-6">
+
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
                       <span className="font-semibold">Цвет:</span> {el.color}
@@ -77,38 +83,11 @@ export default function Cars() {
                       <span className="font-semibold">Пробег :</span>{" "}
                       {el.mileage} км
                     </div>
-                    <div>
-                      <span className="font-semibold">Цена:</span> ${el.price}
-                    </div>
-                    {/* <div>
-                      <span className="font-semibold">Тип топлива:</span>{" "}
-                      {el.fuelType}
-                    </div>
-                    <div>
-                      <span className="font-semibold">Коробка передач:</span>{" "}
-                      {el.transmission}
-                    </div>
-                    <div>
-                      <span className="font-semibold">Матор:</span> {el.engine}
-                    </div>
-                    <div>
-                      <span className="font-semibold">Лошадиная сила:</span>{" "}
-                      {el.horsepower}
-                    </div>
-                    <div>
-                      <span className="font-semibold">Доступно в продаже:</span>{" "}
-                      {el.owners}
-                    </div> */}
+                    
+
+              
                   </div>
-                  {/* <div>
-                    <h3 className="text-lg font-semibold mb-2">Особенности</h3>
-                    <ul className="list-disc list-inside text-gray-700">
-                      {el.features.length &&
-                        el.features.map((ftr, idx) => {
-                          <li key={idx}>{ftr}</li>;
-                        })}
-                    </ul>
-                  </div> */}
+                 
                 </div>
               </div>
             );
