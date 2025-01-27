@@ -3,6 +3,8 @@ import LOGO from "../../assets/svg/logo.svg";
 import N1 from "../../assets/svg/n1.svg";
 import N2 from "../../assets/svg/n2.svg";
 import N3 from "../../assets/svg/n3.svg";
+import React, { memo } from "react";
+
 
 const Header = () => {
   return (
@@ -55,4 +57,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

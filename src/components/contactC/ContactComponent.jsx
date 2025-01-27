@@ -1,6 +1,7 @@
 import footerIcon1 from "../../assets/svg/footer1.svg";
 import footerIcon2 from "../../assets/svg/footer2.svg";
 import footerIcon3 from "../../assets/svg/footer3.svg";
+import React, {memo} from "react";
 
 const ContactComponent = () => {
   return (
@@ -63,4 +64,4 @@ const ContactComponent = () => {
   );
 }
 
-export default ContactComponent;
+export default memo(ContactComponent);

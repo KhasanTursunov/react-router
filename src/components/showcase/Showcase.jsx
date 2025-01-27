@@ -1,4 +1,5 @@
 import ShowcaseImg from '../../assets/svg/showcase.svg'
+import React, { memo } from "react";
 
 
 const Showcase = () => {
@@ -28,4 +29,4 @@ const Showcase = () => {
   );
 }
 
-export default Showcase
+export default memo(Showcase)

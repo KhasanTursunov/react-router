@@ -2,6 +2,7 @@ import BravoSvg from "../../assets/svg/bravo.svg";
 import Telegram from "../../assets/svg/tg.svg";
 import WhatsApp from "../../assets/svg/whatsapp.svg";
 import BgContact from "../../assets/svg/telefon.svg";
+import React, { memo } from "react";
 
 const LoginCom = () => {
   return (
@@ -77,4 +78,4 @@ const LoginCom = () => {
   );
 };
 
-export default LoginCom;
+export default memo(LoginCom);

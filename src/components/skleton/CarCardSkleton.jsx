@@ -1,4 +1,5 @@
 function CarCardSkleton() {
+  
   return (
     <div className="w-full max-w-sm rounded-md border border-gray-300 p-4">
       <div className="flex flex-col animate-pulse gap-4">
